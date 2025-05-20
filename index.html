@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>给石宛鹭的一封情书 ❤️</title>
+  <style>
+    body {
+      background: #ffeef0;
+      font-family: "Comic Sans MS", cursive;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      color: #e91e63;
+      font-size: 3em;
+    }
+
+    .heart {
+      color: red;
+      font-size: 2em;
+      cursor: pointer;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    #joke {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 10px 20px;
+      background: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #e91e63;
+    }
+  </style>
+</head>
+<body>
+  <h1>石宛鹭，520快乐！❤️</h1>
+  <div class="heart" onclick="clickHeart()">💖 点我！</div>
+  <p id="joke">今天我不说土味情话了……因为我已经土到爆炸还在喜欢你。</p>
+  <button onclick="newJoke()">再来一句！</button>
+
+  <script>
+    const jokes = [
+      "你知道我喜欢喝什么吗？呵护你。",
+      "你属什么？属我最喜欢的女孩。",
+      "我最近吃的很清淡，因为你已经够甜了。",
+      "我不是程序员，但我能为你写一生代码。",
+      "你是bug吗？为什么我遇见你就开始死循环地喜欢你。"
+    ];
+
+    function clickHeart() {
+      alert("💌 石宛鹭，我喜欢你，不止520，而是365×n天！");
+    }
+
+    function newJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById("joke").innerText = joke;
+    }
+  </script>
+</body>
+</html>
